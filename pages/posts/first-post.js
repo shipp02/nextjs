@@ -1,5 +1,6 @@
 import Head from 'next/head'
 // import Image from 'next/image'
+// import { noOpLoader } from '../../lib/image'
 
 export default function FirstPost() {
     return (
@@ -9,11 +10,23 @@ export default function FirstPost() {
             </Head>
             <h1 className="post-h1 post-heading"> Roger Federer</h1>
             <center>
+            {/* Image optimization only kinda works since there is
+                no build time optimization only can be optimized
+                using CDN at runtime. This will require a basic script
+                along with access to a CDN*/}
             {/* <Image */} 
             {/*     src="/Roger_Federer_Main.jpg" */}
             {/*     alt="Roger Federer at Wimbeldon" */}
             {/*     width={400} */}
             {/*     height={800} */}
+            {/*     loader={noOpLoader} */}
+                <img
+                    src="/Roger_Federer_Main.jpg"
+                    alt="Roger Federer at Wimbeldon"
+                    width="400"
+                    height="800"
+                    loading="lazy"
+                />
             {/* /> */}
             </center>
             <p className=".post-p">
