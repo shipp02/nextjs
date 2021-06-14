@@ -1,10 +1,12 @@
 import Head from 'next/head'
+import Link from 'next/link'
 // import Image from 'next/image'
 // import { noOpLoader } from '../../lib/image'
 
 export default function FirstPost() {
     return (
         <div className="post-container">
+            <Link href="/"><a>Home</a></Link>
             <Head>
                 <title>Roger Federer</title>
             </Head>
